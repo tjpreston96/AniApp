@@ -3,7 +3,6 @@ const axios = require('axios')
 
 module.exports = {
     new: newAnime,
-    new: newManga,
     Search,
     show,
     
@@ -20,4 +19,7 @@ function newAnime(req, res) {
   
 function Search(req, res){
     axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
+    .then((response)=> {
+        console.log(response.data)
+    })
 }
