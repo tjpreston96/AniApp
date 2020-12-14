@@ -1,4 +1,4 @@
-const Anime = require('../models/anime');
+const Manga = require('../models/manga');
 const axios = require('axios')
 
 module.exports = {
@@ -9,24 +9,12 @@ module.exports = {
     
 }
 
-function newAnime(req, res) {
-    res.render("anime/new", {
-      title: "Anime Search",
-      user: req.user,
-      results: null
-    })
-  }
-  
 function newManga(req, res) {
-    res.render("anime/new", {
+    res.render("manga/new", {
       title: "Manga Search",
       user: req.user,
       results: null
     })
-}
-  
-function Search(req, res){
-    axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
 }
 
 function Search(req, res){
