@@ -10,8 +10,13 @@
     <nav>
       <ul>
         <% if (user) { %>
+        
+        
         <li>
           <a href="/auth/logout">Log Out</a>
+        </li>
+        <li class="nav-item">
+          <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
         </li>
         <% } else { %>
         <li>
