@@ -12,3 +12,12 @@ const reviewSchema = new Schema(
       timestamps: true,
     }
   );
+
+  const mangaSchema = new Schema({
+
+  },{
+      timestamps: true
+  });
+
+
+  module.exports = mongoose.model("Manga", mangaSchema);
