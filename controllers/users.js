@@ -35,7 +35,7 @@ function show(req, res) {
   User.findById(req.params.id)
   .then((userInfo) => {
     Anime.find({ favoritedBy: userInfo._id })
-    .then((games) => {
+    .then((anime) => {
       res.render("users/show", {
         title: "User Details",
         userInfo,
