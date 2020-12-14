@@ -2,7 +2,6 @@ const Manga = require('../models/manga');
 const axios = require('axios')
 
 module.exports = {
-    new: newAnime,
     new: newManga,
     Search,
     show,
