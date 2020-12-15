@@ -3,7 +3,7 @@ const axios = require('axios')
 
 module.exports = {
     new: newAnime,
-    Search,
+    search,
     show,
     index,
     addToWatchList,
@@ -19,7 +19,7 @@ function newAnime(req, res) {
   }
   
   
-function Search(req, res){
+function search(req, res){
     axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
     .then((response)=> {
         console.log(response.data)
