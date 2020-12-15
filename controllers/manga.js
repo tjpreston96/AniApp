@@ -33,3 +33,6 @@ function addToReadList(req,res){
 function removeFromReadList(req,res){
     
 }
+function show(req,res){
+    
+}

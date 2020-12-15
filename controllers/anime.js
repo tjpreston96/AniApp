@@ -35,3 +35,6 @@ function addToWatchList(req,res){
 function removeFromWatchList(req,res){
     
 }
+function show(req,res){
+    
+}
