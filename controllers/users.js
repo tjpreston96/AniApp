@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Anime = require("../models/anime")
+const Manga = require("../models/manga")
 
 module.exports = {
   index,
@@ -40,11 +41,13 @@ function show(req, res) {
         title: "User Details",
         userInfo,
         user: req.user,
-        games
+        anime
       })
     })
   })
 }
+
+// probably going to need show2 for manga
 
 function addFriend(req, res) {
   req.user.friends.push(req.params.id)
