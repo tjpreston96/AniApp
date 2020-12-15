@@ -5,7 +5,9 @@ module.exports = {
     new: newManga,
     Search,
     show,
-    
+    index,
+    addToReadList,
+    removeFromReadList
 }
 
 function newManga(req, res) {
@@ -21,4 +23,13 @@ function Search(req, res){
     .then((response)=> {
         console.log(response.data)
     })
+}
+function index(req,res){
+    
+}
+function addToReadList(req,res){
+    
+}
+function removeFromReadList(req,res){
+    
 }
