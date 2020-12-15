@@ -5,7 +5,9 @@ module.exports = {
     new: newAnime,
     Search,
     show,
-    
+    index,
+    addToWatchList,
+    removeFromWatchList
 }
 
 function newAnime(req, res) {
@@ -22,4 +24,14 @@ function Search(req, res){
     .then((response)=> {
         console.log(response.data)
     })
+}
+
+function index(req,res){
+    
+}
+function addToWatchList(req,res){
+    
+}
+function removeFromWatchList(req,res){
+    
 }
