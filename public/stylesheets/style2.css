@@ -1,0 +1,14 @@
+body {
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: gray;
+    background: url('https://wallpaperaccess.com/full/1313262.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    color: white;
+  }
+  
+  nav {
+    background-color: white;
+  }
+  
