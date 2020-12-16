@@ -22,6 +22,8 @@ const authRouter = require("./routes/auth");
 const usersRouter = require("./routes/users")
 const animeRouter = require("./routes/anime");
 const mangaRouter = require("./routes/manga");
+const messagesRouter = require("./routes/messages")
+
 
 const app = express();
 
@@ -54,6 +56,7 @@ app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/anime", animeRouter);
 app.use("/manga", mangaRouter);
+app.use("/messages", messagesRouter);
 
 
 // catch 404 and forward to error handler
