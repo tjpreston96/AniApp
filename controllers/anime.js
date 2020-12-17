@@ -15,7 +15,7 @@ function newAnime(req, res) {
     res.render("anime/new", {
       title: "Anime Search",
       user: req.user,
-      results: null
+      results: []
     })
   }
   
@@ -23,12 +23,12 @@ function newAnime(req, res) {
   function search(req, res){
       axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
       .then((response)=> {
-        console.log(response.data)
-        // res.render("anime/new",{
-        //     title: "Anime Search",
-        //     user: req.user,
-        //     results: response.data
-        // })
+        console.log(response.data.data)
+        res.render("anime/new",{
+            title: "Anime Search",
+            user: req.user,
+            results: response.data.data
+        })
     })
 }
 

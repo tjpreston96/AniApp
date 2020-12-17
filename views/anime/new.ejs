@@ -10,10 +10,10 @@
   </form>
 
 <!-- results go below -->
-<% if (results) { %>
+<% if (results.length) { %>
     <% results.forEach(anime => { %>
         <div class="card" style="width: 18rem;">
-            <img src="<%= anime.cover_image %>" class="card-img-top" alt="...">
+            <p><%= anime.attributes.canonicalTitle %> </p>
         </div>
     <% }) %>
 <% } %> 
