@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
 <h3>Manga Collection</h3>
+<% if(manga.length > 0) { %> 
+    <% manga.forEach(manga => { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
 
-<% manga.forEach(manga => { %>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-
+            </div>
         </div>
-    </div>
-<% }) %>
+    <% }) %>
+<% } else { %> 
+    There are no manga in your list
+<% } %> 
 
 <%- include('../partials/footer') %>
