@@ -27,7 +27,14 @@ function search(req, res){
 }
 
 function index(req,res){
-    
+    Anime.find({ favoritedBy: req.user._id })
+    .then((anime) => {
+    res.render('anime/index', {
+      title: "Anime Collection",
+      user: req.user,
+      anime
+    })
+  })    
 }
 function addToWatchList(req,res){
     
