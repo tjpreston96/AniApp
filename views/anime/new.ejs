@@ -13,7 +13,13 @@
 <% if (results.length) { %>
     <% results.forEach(anime => { %>
         <div class="card" style="width: 18rem;">
-            <p><%= anime.attributes.canonicalTitle %> </p>
+            <img src="<%= anime.attributes.posterImage.large %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= anime.attributes.canonicalTitle %> </h5>
+
+                <p> </p>
+                <a href="/anime/<%= anime.slug %>" class="btn btn-primary">Details</a>
+            </div>
         </div>
     <% }) %>
 <% } %> 
