@@ -1,5 +1,6 @@
 const Anime = require('../models/anime');
-const axios = require('axios')
+const axios = require('axios');
+const user = require('../models/user');
 
 module.exports = {
     new: newAnime,
@@ -26,15 +27,19 @@ function search(req, res){
     })
 }
 
+
+
+
+
 function index(req,res){
     Anime.find({ favoritedBy: req.user._id })
     .then((anime) => {
-    res.render('anime/index', {
-      title: "Anime Collection",
-      user: req.user,
-      anime
-    })
-  })    
+        res.render('anime/index', {
+            title: "Anime Collection",
+            user: req.user,
+            anime
+        })
+    })    
 }
 function addToWatchList(req,res){
     
@@ -45,3 +50,9 @@ function removeFromWatchList(req,res){
 function show(req,res){
     
 }
+
+// res.render("anime/new",{
+//     title: "Anime Search",
+//     user: req.user,
+//     results: response.data
+// })

@@ -9,4 +9,13 @@
     <button type="submit" class="btn btn-info">Search</button>
   </form>
 
+<!-- results go below -->
+<% if (results) { %>
+    <% results.forEach(anime => { %>
+        <div class="card" style="width: 18rem;">
+            <img src="<%= anime.cover_image %>" class="card-img-top" alt="...">
+        </div>
+    <% }) %>
+<% } %> 
+
 <%- include('../partials/footer') %>
