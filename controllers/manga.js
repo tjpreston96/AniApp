@@ -21,7 +21,12 @@ function newManga(req, res) {
 function search(req, res){
     axios.get(`https://kitsu.io/api/edge//manga?filter[text]=${req.body.query}`)
     .then((response)=> {
-        console.log(response.data)
+        console.log(response.data.data)
+        res.render("manga/new",{
+            title: "Manga Search",
+            user: req.user,
+            results: response.data.data
+        })
     })
 }
 function index(req,res){
