@@ -1,12 +1,16 @@
 <%- include('../partials/header') %>
 
-<h3>Anime Collection</h3>
+<h2>Anime Collection</h2>
+<% if(anime.length > 0) { %> 
+    <% anime.forEach(anime=> { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
 
-<% anime.forEach(anime=> { %>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-
+            </div>
         </div>
-    </div>
-<% }) %>
+    <% }) %>
+<% } else { %> 
+    <h3>There are no anime in your list</h3>
+    <img src="https://33.media.tumblr.com/tumblr_m9h3kixUMO1rezesro1_500.gif" alt="">
+<% } %> 
 <%- include('../partials/footer') %>
