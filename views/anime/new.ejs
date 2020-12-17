@@ -1,4 +1,12 @@
 <%- include('../partials/header') %>
 
+<form action="/anime/search" method="POST">
+    <div class="form-row">
+      <div class="col-md-4">
+        <input type="text" class="form-control" name="query" placeholder="Search for anime...">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-info">Search</button>
+  </form>
 
 <%- include('../partials/footer') %>

@@ -8,3 +8,16 @@ body {
 nav {
   background-color: white;
 }
+
+/* main{
+  display: grid;
+  grid-template-areas: 
+  "aside main aside"
+  "aside main aside"
+  "aside main aside";
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-template-rows: auto;
+}
+.home-head{
+  grid-area: main;
+} */
