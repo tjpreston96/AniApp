@@ -20,10 +20,15 @@ function newAnime(req, res) {
   }
   
   
-function search(req, res){
-    axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
-    .then((response)=> {
+  function search(req, res){
+      axios.get(`https://kitsu.io/api/edge//anime?filter[text]=${req.body.query}`)
+      .then((response)=> {
         console.log(response.data)
+        // res.render("anime/new",{
+        //     title: "Anime Search",
+        //     user: req.user,
+        //     results: response.data
+        // })
     })
 }
 
@@ -50,9 +55,3 @@ function removeFromWatchList(req,res){
 function show(req,res){
     
 }
-
-// res.render("anime/new",{
-//     title: "Anime Search",
-//     user: req.user,
-//     results: response.data
-// })
