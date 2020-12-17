@@ -14,46 +14,47 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">AniApp</a>
-      <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarNav" 
-      aria-controls="navbarNav" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <% if (user) { %>
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Anime</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Manga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Users</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/google">Log Out</a>
-          </li>
-          <li class="nav-item">
-            <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
-          </li>
-        
-       
-        <% } else { %>
+        <a class="navbar-brand" href="/">AniApp</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+          <% if (user) { %>
             <li class="nav-item">
-                <a href="/auth/google">Login with Google</a>
+              <a class="nav-link" href="/home">Home</a>
             </li>
-          <% } %>
-        </ul>
-      </nav>
-      </main>
-      
+            <li class="nav-item">
+              <a class="nav-link" href="/anime">Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/manga">Manga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users">Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/google">Log Out</a>
+            </li>
+            <li class="nav-item">
+              <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
+            </li>
+          
+         
+          <% } else { %>
+            <li class="nav-item">
+              <a href="/auth/google">Login with Google</a>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+    </nav>
+<main>
