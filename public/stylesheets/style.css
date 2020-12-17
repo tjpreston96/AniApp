@@ -12,6 +12,9 @@ nav {
 .card{
   margin-top: 2rem;
 }
+#avatarPhoto {
+  border-radius: 50%;
+}
 
 /* main{
   display: flex;
