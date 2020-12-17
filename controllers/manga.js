@@ -14,7 +14,7 @@ function newManga(req, res) {
     res.render("manga/new", {
       title: "Manga Search",
       user: req.user,
-      results: null
+      results: []
     })
 }
 
