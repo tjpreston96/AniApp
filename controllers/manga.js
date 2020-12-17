@@ -25,7 +25,14 @@ function search(req, res){
     })
 }
 function index(req,res){
-    
+    Manga.find({ favoritedBy: req.user._id })
+    .then((manga) => {
+    res.render('manga/index', {
+      title: "Manga Collection",
+      user: req.user,
+      manga
+    })
+  })    
 }
 function addToReadList(req,res){
     
