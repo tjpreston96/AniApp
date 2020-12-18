@@ -10,8 +10,8 @@
 ## DESCRIPTION
 
 ## GETTING STARTED
-<a href="https://trello.com/b/QRzfVDEe/unit-2-project">link to Trello</a><br>
-<a href="https://ani-app2424.herokuapp.com/">link to AniApp</a>
+<a href="https://trello.com/b/QRzfVDEe/unit-2-project">Trello</a> - This will prompt you to the deployed web app<br>
+<a href="https://ani-app2424.herokuapp.com/">AniApp</a> - This will direct you towards my planning page
 
 ## INSTRUCTIONS
 
