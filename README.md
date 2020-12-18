@@ -17,7 +17,18 @@ https://ani-app2424.herokuapp.com/
 ## INSTRUCTIONS
 
 ## TECHNOLOGIES USED:
-
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Node.js
+- Express.js
+- Mongoose
+- MongoDB
+- Heroku
+- EJS (Embedded Javascript)
+- Google OAuth2
+  
 ## NEXT STEPS:
 
 ## ATTRIBUTIONS:
