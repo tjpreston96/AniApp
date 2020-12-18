@@ -1,0 +1,72 @@
+<h3>Anime Details Page</h3>
+<% if (anime.attributes.youtubeVideoId != null) { %>
+  <video width="480" height="320" controls="controls">
+    <source src="https://www.youtube.com/watch?v=<%= anime.attributes.youtubeVideoId %>" type="video/mp4">
+  </video>
+<% } %>
+    <div class="card" style="width: 36rem;">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="animeinfo-tab" data-toggle="tab" href="#animeinfo" role="tab" aria-controls="animeinfo" aria-selected="true">Anime Info</a>
+        </li>
+        <!-- This is the tab header for the list of who has the anime in their collection -->
+        <li class="nav-item">
+          <a class="nav-link" id="favorited-tab" data-toggle="tab" href="#favorited" role="tab" aria-controls="favorited" aria-selected="false">Favorited By</a>
+        </li>
+        <!-- This is the tab header for reviews -->
+        <li class="nav-item">
+          <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="animeinfo" role="tabpanel" aria-labelledby="animeinfo-tab">
+          <div class="card-body">
+            <h5 class="card-title"><%= anime.attributes.canonicalTitle %> </h5>
+            <p class="card-text"><%= anime.attributes.description %></p>
+            <p class="card-text">Average Rating: <%= anime.attributes.averageRating ? anime.attributes.averageRating : 'N/A' %></p>
+          </div>
+        </div>
+        <!-- This is the tab that will contain our forEach loop indicating who has the anime in their collection -->
+        <div class="tab-pane fade" id="favorited" role="tabpanel" aria-labelledby="favorited-tab">
+          <div class="card-body">
+            <p>Owned By:</p>
+            <!-- This is where we'll put our favoritedBy.forEach loop -->
+          </div>
+        </div>
+        <!-- This is the tab that holds the review info for a anime -->
+        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+           <!--This is where we'll put all the info for reviews  -->
+           <% let total = 0 %>
+           <% reviews.forEach(r => { %>
+             <% total+= r.rating %>
+             <p><%= r.rating %> - <img width="20" id="avatarPhoto" src="<%= r.reviewerPhoto %>" alt=""> <%= r.reviewer %></p>
+             <p><%= r.content %></p>
+           <% }) %>
+           <p>AniApp Score: <%= (total / reviews.length).toFixed(2) %></p>
+           <% if (!reviews.some(u => {return u.reviewer === user.name}) && favoritedBy.some(u => {return u.email === user.email})) { %>
+             <form action="/anime/<%= animeId %>/reviews" method="POST">
+               <div class="form-group">
+                 <textarea class="form-control" name="content" style="width: 18rem;" id="exampleFormControlTextarea1" placeholder="Leave a Review" rows="3"></textarea>
+               </div>
+               <div class="form-group">
+                 <label for="exampleFormControlSelect1">Rating</label>
+                 <select style="width: 18rem;" class="form-control" name="rating" id="exampleFormControlSelect1">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                   <option>7</option>
+                   <option>8</option>
+                   <option>9</option>
+                   <option>10</option>
+                 </select>
+               </div>
+               <input type="text" hidden name="reviewer" value="<%= user.name %>">
+               <input type="text" hidden name="reviewerPhoto" value="<%= user.avatar %>"> 
+               <button class="btn btn-info">Submit</button>
+             </form>
+           <% } %>
+          </div>
+      </div>

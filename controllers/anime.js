@@ -46,12 +46,24 @@ function index(req,res){
         })
     })    
 }
-function addToWatchList(req,res){
-    
+
+function addToWatchList(req, res) {
+    req.user.watchList.push(req.body)
+    req.user.save()
+    .then(() => {
+      res.redirect(`/anime/${req.body.slug}`)
+    })
+  }
+  
+function removeFromWatchList(req, res) {
+    let idx = req.user.watchList.findIndex((a) => a.slug === req.params.slug)
+    req.user.watchList.splice(idx, 1)
+    req.user.save()
+    .then(() => {
+      res.redirect(`/anime/${req.body.slug}`)
+    })
 }
-function removeFromWatchList(req,res){
-    
-}
+
 function show(req, res) {
     axios
       .get(`https://kitsu.io/api/edge//anime?filter[slug]=${req.params.slug}`)
