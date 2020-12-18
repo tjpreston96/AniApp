@@ -69,25 +69,26 @@ function show(req, res) {
       .get(`https://kitsu.io/api/edge//anime?filter[slug]=${req.params.slug}`)
       .then((response) => {
 
-          console.log(response.data.data)
-        Anime.findOne( response.data.data.id )
+          console.log(response.data.data[0])
+        Anime.findOne( {id: response.data.data[0].id} )
         .populate('favoritedBy')
         .then((anime) => {
+            console.log(response.data.data[0], "banana pancakes")
           if(anime) {
             res.render("anime/show", {
                 title: "Anime Details",
                 user: req.user,
-                anime: response.data.data,
+                anime: response.data.data[0],
                 favoritedBy: anime.favoritedBy,
                 reviews: anime.reviews,
               
             }); 
-            console.log(anime)
+            
           } else {
             res.render("anime/show", {
                 title: "Anime Details",
                 user: req.user,
-                anime: response.data.data,
+                anime: response.data.data[0],
                 favoritedBy: [""],
                 reviews: [""]
             }); 

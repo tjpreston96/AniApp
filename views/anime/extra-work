@@ -70,3 +70,12 @@
            <% } %>
           </div>
       </div>
+
+
+
+
+
+
+
+      <h1>some awesome details</h1>
+<p><% console.log(anime.attributes.youtubeVideoId) %> </p>
