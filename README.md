@@ -10,7 +10,7 @@
 ## DESCRIPTION
 
 ## GETTING STARTED
-<a href="https://trello.com/b/QRzfVDEe/unit-2-project">Trello</a>
+<a href="https://trello.com/b/QRzfVDEe/unit-2-project">Trello</a><br>
 <a href="https://ani-app2424.herokuapp.com/">AniApp</a>
 
 ## INSTRUCTIONS
