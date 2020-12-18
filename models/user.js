@@ -1,16 +1,20 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const animeListSchema = new Schema(
+const readListSchema = new Schema(
   {
+    title: String,
+    slug: String
 
   },{
   timestamps: true
   })
 
 
-const mangaListSchema = new Schema(
+const watchListSchema = new Schema(
   {
+    title: String,
+    slug: String
 
   },{
   timestamps: true
@@ -25,8 +29,8 @@ const userSchema = new Schema(
     googleId: String,
     genreChoices: String,
     friends: [{type: Schema.Types.ObjectId, ref: "User"}],
-    mangaList: [mangaListSchema],
-    animeList: [animeListSchema]
+    readList: [readListSchema],
+    watchList: [watchListSchema]
   },
   {
     timestamps: true,

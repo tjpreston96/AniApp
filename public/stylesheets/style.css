@@ -16,9 +16,26 @@ nav {
   border-radius: 50%;
 }
 
-/* main{
+main{
   display: flex;
   flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.collectionImg{
+  max-width: 30rem;
+}
+
+.collectionBtn{
+  max-width: 30rem;
+}
+hr {
+  border-top: 3px solid black;
+
+}
+/* main>div:first-of-type{
+  display: flex;
   justify-content: center;
   align-items: center;
 } */

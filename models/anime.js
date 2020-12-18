@@ -13,6 +13,18 @@ const reviewSchema = new Schema({
   );
 
   const animeSchema = new Schema({
+    title: String,
+    slug: String,
+    id: Number,
+    startDate: String,
+    endDate: String,
+    description: String,
+    imageUrl: String,
+    videoUrl: String,
+    favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    reviews: [reviewSchema],
+    
+
 
   },{
       timestamps: true
