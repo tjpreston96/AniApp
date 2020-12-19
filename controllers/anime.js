@@ -70,7 +70,7 @@ function show(req, res) {
       .then((response) => {
 
           console.log(response.data.data[0])
-        Anime.findOne( {id: response.data.data[0].id} )
+        Anime.findOne( {slug: response.data.data[0].slug} )
         .populate('favoritedBy')
         .then((anime) => {
             console.log(response.data.data[0], "banana pancakes")
