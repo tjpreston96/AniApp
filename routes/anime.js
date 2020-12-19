@@ -7,7 +7,8 @@ router.post('/search', isLoggedIn, animeCtrl.search)
 router.get('/:slug', isLoggedIn, animeCtrl.show)
 router.post('/:slug/watch', isLoggedIn, animeCtrl.addToWatchList)
 router.delete('/:slug/watch', isLoggedIn, animeCtrl.removeFromWatchList)
-
+router.post('/:slug/collection', isLoggedIn, animeCtrl.addToCollection)
+router.delete('/:slug/collection', isLoggedIn, animeCtrl.removeFromCollection)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

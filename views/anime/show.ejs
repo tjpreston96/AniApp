@@ -70,11 +70,28 @@
            <% } %>
           </div>
       </div>
+      <!-- This is where we'll put a button to add/remove a anime to/from our collection -->
+    <% if (favoritedBy.some(u => {return u.email === user.email})) { %>
+      <form action="/anime/<%= anime.attributes.slug %>/collection?_method=DELETE" method="POST">
+        <% } else { %>
+      <form action="/anime/<%= anime.attributes.slug %>/collection" method="POST">
+    <% } %>
+      <input type="text" hidden name="title" value="<%= anime.attributes.canonicalTitle %>">
+      <input type="date" hidden name="startDate" value="<%= anime.attributes.startDate %>">
+      <input type="number" hidden name="averageRating" value="<%= anime.attributes.averageRating %>">
+      <input type="text" hidden name="status" value="<%= anime.attributes.status %>">
+      <input type="text" hidden name="ageRating" value="<%= anime.attributes.ageRating %>">
+      <input type="text" hidden name="videoUrl" value="<%= anime.attributes.youtubeVideoId ? anime.attributes.youtubeVideoId : "" %>">
+      <input type="text" hidden name="imageUrl" value="<%= anime.attributes.posterImage.large %>">
+      <input type="number" hidden name="id" value="<%= anime.attributes.id %>">
+      <input type="text" hidden name="slug" value="<%= anime.attributes.slug %>">
+      <button class="btn btn-warning"><%= favoritedBy.some(u => {return u.email === user.email}) ? "Remove from Collection" : "Add to Collection" %></button>
+      </form>
           <!-- This is where we'll put a button to add/remove a anime to/from our watchlist -->
     <% if (user.watchList.some(a => {return a.slug === anime.slug})) { %>
-        <form action="/anime/<%= anime.slug %>/watch?_method=DELETE" method="POST">
+        <form action="/anime/<%= anime.attributes.slug %>/watch?_method=DELETE" method="POST">
       <% } else { %>
-        <form action="/anime/<%= anime.slug %>/watch" method="POST">
+        <form action="/anime/<%= anime.attributes.slug %>/watch" method="POST">
       <% } %>
         <input type="text" hidden name="title" value="<%= anime.name %>">
         <input type="text" hidden name="slug" value="<%= anime.slug %>">

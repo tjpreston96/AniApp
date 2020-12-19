@@ -9,7 +9,9 @@ module.exports = {
     show,
     index,
     addToWatchList,
-    removeFromWatchList
+    removeFromWatchList,
+    addToCollection,
+    removeFromCollection
 }
 
 function newAnime(req, res) {
@@ -48,6 +50,40 @@ function index(req,res){
     })    
 }
 
+
+function show(req, res) {
+  axios
+  .get(`https://kitsu.io/api/edge//anime?filter[slug]=${req.params.slug}`)
+  .then((response) => {
+    
+    // console.log(response.data.data[0])
+    Anime.findOne( {slug: response.data.data[0].slug} )
+    .populate('favoritedBy')
+    .then((anime) => {
+      // console.log(response.data.data[0], "banana pancakes")
+      if(anime) {
+        res.render("anime/show", {
+          title: "Anime Details",
+          user: req.user,
+          anime: response.data.data[0],
+          favoritedBy: anime.favoritedBy,
+          reviews: anime.reviews,
+          
+        }); 
+        
+      } else {
+        res.render("anime/show", {
+          title: "Anime Details",
+          user: req.user,
+          anime: response.data.data[0],
+          favoritedBy: [""],
+          reviews: [""]
+        }); 
+      }
+    })
+  });
+}
+
 function addToWatchList(req, res) {
     req.user.watchList.push(req.body)
     req.user.save()
@@ -65,35 +101,33 @@ function removeFromWatchList(req, res) {
     })
 }
 
-function show(req, res) {
-    axios
-      .get(`https://kitsu.io/api/edge//anime?filter[slug]=${req.params.slug}`)
-      .then((response) => {
+function addToCollection(req, res) {
+  Anime.findOne({ slug: req.body.slug })
+  .then((anime) => {
+    if (anime) {
+      anime.favoritedBy.push(req.user._id)
+      anime.save()
+      .then(() => {
+        res.redirect(`/anime/${req.body.slug}`)
+      })
+    } else {
+      req.body.favoritedBy = req.user._id
+      Anime.create(req.body)
+      .then(() => {
+        res.redirect(`/anime/${req.body.slug}`)
+      })
+    }
+  })
+}
 
-          console.log(response.data.data[0])
-        Anime.findOne( {slug: response.data.data[0].slug} )
-        .populate('favoritedBy')
-        .then((anime) => {
-            console.log(response.data.data[0], "banana pancakes")
-          if(anime) {
-            res.render("anime/show", {
-                title: "Anime Details",
-                user: req.user,
-                anime: response.data.data[0],
-                favoritedBy: anime.favoritedBy,
-                reviews: anime.reviews,
-              
-            }); 
-            
-          } else {
-            res.render("anime/show", {
-                title: "Anime Details",
-                user: req.user,
-                anime: response.data.data[0],
-                favoritedBy: [""],
-                reviews: [""]
-            }); 
-          }
-        })
-      });
-  }
+function removeFromCollection(req, res) {
+  Anime.findOne({ slug: req.params.slug })
+  .then((anime) => {
+    let idx = anime.favoritedBy.indexOf(req.user._id)
+    anime.favoritedBy.splice(idx, 1)
+    anime.save()
+    .then(() => {
+      res.redirect(`/anime/${req.body.slug}`)
+    })
+  })
+}

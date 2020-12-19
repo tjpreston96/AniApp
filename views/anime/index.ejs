@@ -4,8 +4,12 @@
 <% if(anime.length > 0) { %> 
     <% anime.forEach(anime=> { %>
         <div class="card" style="width: 18rem;">
+            <img src="<%= anime.imageUrl %>" class="card-img-top" alt="...">
             <div class="card-body">
-
+                <h5 class="card-title"><%= anime.title %> </h5>
+                <p class="card-text">Status: <%= anime.status %> </p>
+                <p class="card-text">Average Score: <%= anime.averageRating %> </p>
+                <a href="/anime/<%= anime.slug %>" class="btn btn-primary">Details</a>
             </div>
         </div>
     <% }) %>
