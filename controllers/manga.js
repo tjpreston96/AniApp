@@ -21,7 +21,6 @@ function newManga(req, res) {
 function search(req, res){
     axios.get(`https://kitsu.io/api/edge//manga?filter[text]=${req.body.query}`)
     .then((response)=> {
-        console.log(response.data.data)
         res.render("manga/new",{
             title: "Manga Search",
             user: req.user,
@@ -45,6 +44,31 @@ function addToReadList(req,res){
 function removeFromReadList(req,res){
     
 }
-function show(req,res){
-    
+function show(req, res) {
+  axios
+    .get(`https://kitsu.io/api/edge//manga?filter[slug]=${req.params.slug}`)
+    .then((response) => {
+      Manga.findOne( {slug: response.data.data[0].slug} )
+      .populate('favoritedBy')
+      .then((manga) => {
+        if(manga) {
+          res.render("manga/show", {
+              title: "Manga Details",
+              user: req.user,
+              manga: response.data.data[0],
+              favoritedBy: manga.favoritedBy,
+              reviews: manga.reviews,
+          }); 
+          
+        } else {
+          res.render("manga/show", {
+              title: "Manga Details",
+              user: req.user,
+              manga: response.data.data[0],
+              favoritedBy: [""],
+              reviews: [""]
+          }); 
+        }
+      })
+    });
 }
