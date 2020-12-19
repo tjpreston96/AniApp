@@ -2,6 +2,7 @@ const Anime = require('../models/anime');
 const axios = require('axios');
 const user = require('../models/user');
 
+
 module.exports = {
     new: newAnime,
     search,

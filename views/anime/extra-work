@@ -140,3 +140,7 @@
   }
 
 ================================================================
+
+const browser = document.querySelector('iframe')
+
+browser.setVolume(0.5);
