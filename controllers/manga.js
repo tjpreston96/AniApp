@@ -7,7 +7,9 @@ module.exports = {
     show,
     index,
     addToReadList,
-    removeFromReadList
+    removeFromReadList,
+    addToCollection,
+    removeFromCollection
 }
 
 function newManga(req, res) {
@@ -72,3 +74,23 @@ function show(req, res) {
       })
     });
 }
+
+function addToCollection(req, res) {
+  Manga.findOne({ slug: req.body.slug })
+  .then((manga) => {
+    if (manga) {
+      manga.favoritedBy.push(req.user._id)
+      manga.save()
+      .then(() => {
+        res.redirect(`/manga/${req.body.slug}`)
+      })
+    } else {
+      req.body.favoritedBy = req.user._id
+      manga.create(req.body)
+      .then(() => {
+        res.redirect(`/manga/${req.body.slug}`)
+      })
+    }
+  })
+}
+
