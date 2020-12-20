@@ -6,8 +6,6 @@ module.exports = {
     search,
     show,
     index,
-    addToReadList,
-    removeFromReadList,
     addToCollection,
     removeFromCollection
 }
@@ -40,12 +38,7 @@ function index(req,res){
     })
   })    
 }
-function addToReadList(req,res){
-    
-}
-function removeFromReadList(req,res){
-    
-}
+
 function show(req, res) {
   axios
     .get(`https://kitsu.io/api/edge//manga?filter[slug]=${req.params.slug}`)

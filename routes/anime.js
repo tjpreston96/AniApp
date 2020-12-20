@@ -5,8 +5,6 @@ router.get('/new', isLoggedIn, animeCtrl.new);
 router.get('/', isLoggedIn, animeCtrl.index)
 router.post('/search', isLoggedIn, animeCtrl.search)
 router.get('/:slug', isLoggedIn, animeCtrl.show)
-router.post('/:slug/watch', isLoggedIn, animeCtrl.addToWatchList)
-router.delete('/:slug/watch', isLoggedIn, animeCtrl.removeFromWatchList)
 router.post('/:slug/collection', isLoggedIn, animeCtrl.addToCollection)
 router.delete('/:slug/collection', isLoggedIn, animeCtrl.removeFromCollection)
 

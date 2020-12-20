@@ -5,8 +5,6 @@ router.get('/new', isLoggedIn, mangaCtrl.new)
 router.get('/', isLoggedIn, mangaCtrl.index)
 router.post('/search', isLoggedIn, mangaCtrl.search)
 router.get('/:slug', isLoggedIn, mangaCtrl.show)
-router.post('/:slug/read', isLoggedIn, mangaCtrl.addToReadList)
-router.delete('/:slug/read', isLoggedIn, mangaCtrl.removeFromReadList)
 router.post('/:slug/collection', isLoggedIn, mangaCtrl.addToCollection)
 router.delete('/:slug/collection', isLoggedIn, mangaCtrl.removeFromCollection)
 

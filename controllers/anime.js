@@ -8,8 +8,6 @@ module.exports = {
     search,
     show,
     index,
-    addToWatchList,
-    removeFromWatchList,
     addToCollection,
     removeFromCollection
 }
@@ -82,23 +80,6 @@ function show(req, res) {
       }
     })
   });
-}
-
-function addToWatchList(req, res) {
-    req.user.watchList.push(req.body)
-    req.user.save()
-    .then(() => {
-      res.redirect(`/anime/${req.body.slug}`)
-    })
-  }
-  
-function removeFromWatchList(req, res) {
-    let idx = req.user.watchList.findIndex((a) => a.slug === req.params.slug)
-    req.user.watchList.splice(idx, 1)
-    req.user.save()
-    .then(() => {
-      res.redirect(`/anime/${req.body.slug}`)
-    })
 }
 
 function addToCollection(req, res) {

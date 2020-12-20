@@ -84,16 +84,6 @@
       <input type="text" hidden name="slug" value="<%= manga.attributes.slug %>">
       <button class="btn btn-warning"><%= favoritedBy.some(u => {return u.email === user.email}) ? "Remove from Collection" : "Add to Collection" %></button>
       </form>
-          <!-- This is where we'll put a button to add/remove a manga to/from our watchlist -->
-    <% if (user.watchList.some(a => {return a.slug === manga.slug})) { %>
-        <form action="/manga/<%= manga.attributes.slug %>/watch?_method=DELETE" method="POST">
-      <% } else { %>
-        <form action="/manga/<%= manga.attributes.slug %>/watch" method="POST">
-      <% } %>
-        <input type="text" hidden name="title" value="<%= manga.name %>">
-        <input type="text" hidden name="slug" value="<%= manga.slug %>">
-        <button class="btn btn-info" disabled><%= user.watchList.some(a => {return a.slug === manga.slug}) ? "Unwatch" : "Watch" %></button>
-        </form>
 
 
 
