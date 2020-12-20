@@ -13,7 +13,18 @@ const reviewSchema = new Schema({
   );
 
   const mangaSchema = new Schema({
-
+    title: String,
+    slug: String,
+    id: Number,
+    status: String,
+    averageRating: String,
+    startDate: String,
+    endDate: String,
+    description: String,
+    imageUrl: String,
+    videoUrl: String,
+    favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    reviews: [reviewSchema],
   },{
       timestamps: true
   });

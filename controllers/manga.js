@@ -86,7 +86,7 @@ function addToCollection(req, res) {
       })
     } else {
       req.body.favoritedBy = req.user._id
-      manga.create(req.body)
+      Manga.create(req.body)
       .then(() => {
         res.redirect(`/manga/${req.body.slug}`)
       })

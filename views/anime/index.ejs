@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
 <h2>Anime Collection</h2>
+<a href="/anime/new" class="btn btn-info collectionBtn" role="button">ADD ANIME</a>
+<hr>
 <% if(anime.length > 0) { %> 
     <% anime.forEach(anime=> { %>
         <div class="card" style="width: 18rem;">
@@ -17,6 +19,4 @@
     <h3>There are no anime in your list</h3>
     <img class="collectionImg" src="https://image.myanimelist.net/ui/ZPVPz_CObDpnH08hnJF81OfXLbu4yKz7EE0wsUNM1bNeYbLa_usjYKZUoMkJtbUpSaXULsTMw_2ryJt0YU-zoWe6SD9M55OMrRoOeili2qaCaHWkz6wmoBKJnGyDGcgd" alt="">
 <% } %> 
-<hr>
-<a href="/anime/new" class="btn btn-info collectionBtn" role="button">ADD ANIME</a>
 <%- include('../partials/footer') %>
