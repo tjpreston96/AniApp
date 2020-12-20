@@ -1,10 +1,15 @@
 <%- include('../partials/header') %>
 <h3>Manga Collection</h3>
+<a href="/manga/new" class="btn btn-info collectionBtn" role="button">ADD MANGA</a>
 <% if(manga.length > 0) { %> 
     <% manga.forEach(manga => { %>
         <div class="card" style="width: 18rem;">
+            <img src="<%= manga.imageUrl %>" class="card-img-top" alt="...">
             <div class="card-body">
-
+                <h5 class="card-title"><%= manga.title %> </h5>
+                <p class="card-text">Status: <%= manga.status %> </p>
+                <p class="card-text">Average Score: <%= manga.averageRating %> </p>
+                <a href="/manga/<%= manga.slug %>" class="btn btn-primary">Details</a>
             </div>
         </div>
     <% }) %>
@@ -12,7 +17,5 @@
     <h3>There are no manga in your list</h3>
     <img class="collectionImg" src="https://33.media.tumblr.com/tumblr_m9h3kixUMO1rezesro1_500.gif" alt="">
 <% } %> 
-<hr>
-<a href="/manga/new" class="btn btn-info collectionBtn" role="button">ADD MANGA</a>
 
 <%- include('../partials/footer') %>
