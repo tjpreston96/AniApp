@@ -94,3 +94,14 @@ function addToCollection(req, res) {
   })
 }
 
+function removeFromCollection(req, res) {
+  Manga.findOne({ slug: req.params.slug })
+  .then((manga) => {
+    let idx = manga.favoritedBy.indexOf(req.user._id)
+    manga.favoritedBy.splice(idx, 1)
+    manga.save()
+    .then(() => {
+      res.redirect(`/manga/${req.body.slug}`)
+    })
+  })
+}
