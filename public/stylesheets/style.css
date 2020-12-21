@@ -1,6 +1,6 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+  background-color: rgb(74, 59, 136);
   margin: 0;
   min-width: 100vw;
  
@@ -33,6 +33,10 @@ main{
 hr {
   border-top: 3px solid black;
 
+}
+
+main{
+  align-items: center;
 }
 /* main>div:first-of-type{
   display: flex;

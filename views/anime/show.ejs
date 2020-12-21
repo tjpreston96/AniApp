@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <h3>Anime Details Page</h3>
 <% if (anime.attributes.youtubeVideoId != null) { %>
-    <iframe id="ytplayer" type="text/html" width="550" height="360" src="https://www.youtube.com/embed/<%= anime.attributes.youtubeVideoId %>" frameborder="0"></iframe>
+    <iframe id="ytplayer" type="text/html" width="550" height="360" src="https://www.youtube.com/embed/<%= anime.attributes.youtubeVideoId %>" frameborder="0" allowfullscreen></iframe>
   
 <% } %>
     <div class="card" style="width: 36rem;">
@@ -33,7 +33,7 @@
             <!-- This is where we'll put our favoritedBy.forEach loop -->
           </div>
         </div>
-        <!-- This is the tab that holds the review info for a anime -->
+        <!-- Review info tab -->
         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
            <!--This is where we'll put all the info for reviews  -->
            <% let total = 0 %>
@@ -70,10 +70,10 @@
            <% } %>
           </div>
       </div>
-      <!-- This is where we'll put a button to add/remove a anime to/from our collection -->
-    <% if (favoritedBy.some(u => {return u.email === user.email})) { %>
+      <!-- Put a button to add/remove a anime to/from our collection -->
+    <% if (favoritedBy.some(u =>  u.email === user.email)) { %>
       <form action="/anime/<%= anime.attributes.slug %>/collection?_method=DELETE" method="POST">
-        <% } else { %>
+    <% } else { %>
       <form action="/anime/<%= anime.attributes.slug %>/collection" method="POST">
     <% } %>
       <input type="text" hidden name="title" value="<%= anime.attributes.canonicalTitle %>">
@@ -85,7 +85,7 @@
       <input type="text" hidden name="imageUrl" value="<%= anime.attributes.posterImage.large %>">
       <input type="number" hidden name="id" value="<%= anime.attributes.id %>">
       <input type="text" hidden name="slug" value="<%= anime.attributes.slug %>">
-      <button class="btn btn-warning"><%= favoritedBy.some(u => {return u.email === user.email}) ? "Remove from Collection" : "Add to Collection" %></button>
+      <button class="btn btn-warning"><%= favoritedBy.some(u => u.email === user.email) ? "Remove from Collection" : "Add to Collection" %></button>
       </form>
    
 
