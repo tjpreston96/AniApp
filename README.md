@@ -54,5 +54,6 @@ While the below disclaimers are technically required by their license-holders I 
 - Kitsu API
 - Youtube
 - Spotify
+- Readyartwork.com
 
 
