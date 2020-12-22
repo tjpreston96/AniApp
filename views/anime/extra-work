@@ -144,3 +144,9 @@
 const browser = document.querySelector('iframe')
 
 browser.setVolume(0.5);
+
+================================================================
+
+    <h1><%= message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
