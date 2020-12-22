@@ -44,7 +44,7 @@
            <% }) %>
            <p>AniApp Score: <%= (total / reviews.length).toFixed(2) %></p>
            <% if (!reviews.some(u => {return u.reviewer === user.name}) && favoritedBy.some(u => {return u.email === user.email})) { %>
-             <form action="/anime/<%= animeId %>/reviews" method="POST">
+             <form action="/anime/<%= anime._id %>/reviews" method="POST">
                <div class="form-group">
                  <textarea class="form-control" name="content" style="width: 18rem;" id="exampleFormControlTextarea1" placeholder="Leave a Review" rows="3"></textarea>
                </div>
