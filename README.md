@@ -17,7 +17,7 @@
 This will direct you to my planning page.
 
 ## INSTRUCTIONS
-
+Login to Google to access the app. Enjoy the Lounge and interact with others (if lounge is finished by then.) Navigate to the anime or manga section to view your collection. If you dont have a collection, search for an anime/manga of your choice. If searching for an anime, feel free to enjoy the Youtube trailers for each respective show.
 
 ## TECHNOLOGIES USED:
 - HTML
@@ -32,6 +32,8 @@ This will direct you to my planning page.
 - EJS (Embedded Javascript)
 - Google OAuth2
 - Kitsu API
+- Youtube
+- Spotify
   
 ## NEXT STEPS:
 - [ ] Reviews
@@ -44,5 +46,7 @@ This will direct you to my planning page.
 While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
 - Google Images
 - Kitsu API
+- Youtube
+- Spotify
 
 
