@@ -3,7 +3,6 @@
 ## PSEUDOCODE:
 
 ## WIREFRAMING:
-### ORIGINAL CONCEPTS:
 ### WIREFRAME IMAGES:
 ### POSTMAN TESTS FOR VALUES:
 ![test1](images/cowboy.png)
@@ -29,9 +28,17 @@ This will direct you to my planning page.
 - Heroku
 - EJS (Embedded Javascript)
 - Google OAuth2
+- Kitsu API
   
 ## NEXT STEPS:
+-[] Reviews
+-[] Favorite Anime/Manga
+-[] Live Message Board
+-[] Anime/Manga Suggestions
 
 ## ATTRIBUTIONS:
+While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
+- Google Images
+- Kitsu API
 
 
