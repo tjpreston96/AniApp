@@ -34,11 +34,11 @@ This will direct you to my planning page.
 - Kitsu API
   
 ## NEXT STEPS:
--[] Reviews
--[] Favorite Anime/Manga
--[] Live Message Board
--[] Anime/Manga Suggestions
--[] Interactive Lounge area
+- [ ] Reviews
+- [ ] Favorite Anime/Manga
+- [ ] Live Message Board
+- [ ] Anime/Manga Suggestions
+- [ ] Interactive Lounge area
 
 ## ATTRIBUTIONS:
 While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
