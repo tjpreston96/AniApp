@@ -10,7 +10,10 @@
 ![test1](images/cowboy.png)
 ![test2](images/yu-yu.png)
 ## DESCRIPTION
-
+### OVERALL
+This is AniApp. AniApp is a database of anime/manga (finished or active) that allows you to organize and sort through titles and watch trailers; making it easier to find titles that fit your interests. The interactive lounge area (when completed) is a great place to chill, listen to music and interact with other users to discuss current topics, titles, and plot lines. 
+### PROFILE
+The 'My Profile' section of this app allows you to view and manage personal info, change avatar image, and update bio/alias as well as viewing your friends list. The 'Users' section provides you with an up to date list of users with access to a 'User Details' page that displays name, when they joined, email, favorite anime and manga (icebox) by clicking on a respective users name.
 ## GETTING STARTED
 <a href="https://trello.com/b/QRzfVDEe/unit-2-project">Trello</a> - This will direct you to my planning page<br>
 <a href="https://ani-app2424.herokuapp.com/">AniApp</a> - This will prompt you to the deployed web app.
