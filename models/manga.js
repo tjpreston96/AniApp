@@ -15,7 +15,6 @@ const reviewSchema = new Schema({
   const mangaSchema = new Schema({
     title: String,
     slug: String,
-    id: Number,
     status: String,
     averageRating: String,
     startDate: String,

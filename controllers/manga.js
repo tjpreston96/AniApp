@@ -43,7 +43,7 @@ function show(req, res) {
   axios
     .get(`https://kitsu.io/api/edge//manga?filter[slug]=${req.params.slug}`)
     .then((response) => {
-      Manga.findOne( {slug: response.data.data[0].slug} )
+      Manga.findOne( {slug: response.data.data[0].attributes.slug} )
       .populate('favoritedBy')
       .then((manga) => {
         if(manga) {
@@ -54,7 +54,6 @@ function show(req, res) {
               favoritedBy: manga.favoritedBy,
               reviews: manga.reviews,
           }); 
-          
         } else {
           res.render("manga/show", {
               title: "Manga Details",
