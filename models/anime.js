@@ -15,7 +15,6 @@ const reviewSchema = new Schema({
   const animeSchema = new Schema({
     title: String,
     slug: String,
-    id: Number,
     status: String,
     averageRating: String,
     startDate: String,
