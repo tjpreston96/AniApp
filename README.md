@@ -1,9 +1,11 @@
 # AniApp
 
-## PSEUDOCODE:
-
 ## WIREFRAMING:
 ### WIREFRAME IMAGES:
+![wf1](images/wireframe1.png)
+![wf2](images/wireframe2.png)
+![wf3](images/wireframe3.png)
+
 ### POSTMAN TESTS FOR VALUES:
 ![test1](images/cowboy.png)
 ![test2](images/yu-yu.png)
@@ -15,6 +17,7 @@
 This will direct you to my planning page.
 
 ## INSTRUCTIONS
+
 
 ## TECHNOLOGIES USED:
 - HTML
@@ -35,6 +38,7 @@ This will direct you to my planning page.
 -[] Favorite Anime/Manga
 -[] Live Message Board
 -[] Anime/Manga Suggestions
+-[] Interactive Lounge area
 
 ## ATTRIBUTIONS:
 While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
