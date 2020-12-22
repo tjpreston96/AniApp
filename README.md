@@ -39,11 +39,14 @@ Login to Google to access the app. Enjoy the Lounge and interact with others (if
 - Spotify
   
 ## NEXT STEPS:
-- [ ] Reviews
-- [ ] Favorite Anime/Manga
-- [ ] Live Message Board
-- [ ] Anime/Manga Suggestions
-- [ ] Interactive Lounge area
+- [ ] BETTER MOBILE RESPONSIVENESS (whole app)
+- [ ] Reviews (Anime/Manga)
+- [ ] Favorite Anime/Manga (users)(single)
+- [ ] Interactive Lounge area (home)
+- [ ] Live Message Board (socket.io - home)
+- [ ] Anime/Manga Suggestions (3 - columns - home)
+- [ ] Better Audio Source (VOLUME CONTROL - home)
+- [ ] Multiple Playlists (home)
 
 ## ATTRIBUTIONS:
 While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
