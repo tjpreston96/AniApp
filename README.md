@@ -43,7 +43,7 @@ Login to Google to access the app. Enjoy the Lounge and interact with others (if
 - [ ] Reviews (Anime/Manga)
 - [ ] Favorite Anime/Manga (users)(single)
 - [ ] Interactive Lounge area (home)
-- [ ] Live Message Board (socket.io - home)
+- [ ] Live Message Board - Live Chat (socket.io - home)
 - [ ] Anime/Manga Suggestions (3 - columns - home)
 - [ ] Better Audio Source (VOLUME CONTROL - home)
 - [ ] Multiple Playlists (home)
