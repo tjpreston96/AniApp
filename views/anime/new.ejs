@@ -1,28 +1,35 @@
 <%- include('../partials/header') %>
 
 <form action="/anime/search" method="POST">
-    <div class="form-row">
-      <div class="col-md-12" >
-        <input type="text" class="form-control" name="query" placeholder="Search for anime..." >
-      </div>
+  <div class="form-row">
+    <div class="col-md-12">
+      <input
+        type="text"
+        class="form-control"
+        name="query"
+        placeholder="Search for anime..."
+      />
     </div>
-    <button type="submit" class="btn btn-info">Search</button>
-  </form>
+  </div>
+  <button type="submit" class="btn btn-info">Search</button>
+</form>
 
 <!-- results go below -->
-<% if (results.length) { %>
-    <% results.forEach(anime => { %>
-        <div class="card" style="width: 18rem;">
-            <img src="<%= anime.attributes.posterImage.large %>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><%= anime.attributes.canonicalTitle %> </h5>
-                <p class="card-text">Age Rating: <%= anime.attributes.ageRating %> </p>
-                <p class="card-text">Rating: <%= anime.attributes.averageRating %> </p>
-                <p class="card-text">Status: <%= anime.attributes.status %> </p>
-                <a href="/anime/<%= anime.attributes.slug %>" class="btn btn-primary">Details</a>
-            </div>
-        </div>
-    <% }) %>
-<% } %> 
-
-<%- include('../partials/footer') %>
+<% if (results.length) { %> <% results.forEach(anime => { %>
+<div class="card" style="width: 18rem">
+  <img
+    src="<%= anime.attributes.posterImage.large %>"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title"><%= anime.attributes.canonicalTitle %></h5>
+    <p class="card-text">Age Rating: <%= anime.attributes.ageRating %></p>
+    <p class="card-text">Rating: <%= anime.attributes.averageRating %></p>
+    <p class="card-text">Status: <%= anime.attributes.status %></p>
+    <a href="/anime/<%= anime.attributes.slug %>" class="btn btn-primary"
+      >Details</a
+    >
+  </div>
+</div>
+<% }) %> <% } %> <%- include('../partials/footer') %>

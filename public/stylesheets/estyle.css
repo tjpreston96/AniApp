@@ -1,17 +1,17 @@
 body {
-    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: black;
-    background: url('https://www.readyartwork.com/wp-content/uploads/2019/02/RAWR-404-Page.gif');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    min-width: 100vw;
-    margin: 0;
-    color: white;
-    text-align: center;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  background: url("https://www.readyartwork.com/wp-content/uploads/2019/02/RAWR-404-Page.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  color: white;
+  text-align: center;
 }
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }

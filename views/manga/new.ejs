@@ -1,30 +1,38 @@
 <%- include('../partials/header') %>
 
 <form action="/manga/search" method="POST">
-    <div class="form-row">
-      <div class="col-md-10">
-        <input type="text" class="form-control" name="query" placeholder="Search for manga...">
-      </div>
-      <button type="submit" class="btn btn-info">Search</button>
+  <div class="form-row">
+    <div class="col-md-10">
+      <input
+        type="text"
+        class="form-control"
+        name="query"
+        placeholder="Search for manga..."
+      />
     </div>
-  </form>
+    <button type="submit" class="btn btn-info">Search</button>
+  </div>
+</form>
 
 <!-- results go below -->
-<% if (results.length) { %>
-    <% results.forEach(manga => { %>
-        <div class="card" style="width: 18rem;">
-            <img src="<%= manga.attributes.posterImage.large %>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><%= manga.attributes.canonicalTitle %> </h5>
-                <p class="card-text">Rating: <%= manga.attributes.averageRating %> </p>
-                <p class="card-text">Status: <%= manga.attributes.status %> </p>
-                <p class="card-text">Start: <%= manga.attributes.startDate %> </p>
-                <p class="card-text">Finish: <%= manga.attributes.endDate ? manga.attributes.endDate : "N/A" %> </p>
-                <a href="/manga/<%= manga.attributes.slug %>" class="btn btn-primary">Details</a>
-            </div>
-        </div>
-    <% }) %>
-<% } %> 
-
-
-<%- include('../partials/footer') %>
+<% if (results.length) { %> <% results.forEach(manga => { %>
+<div class="card" style="width: 18rem">
+  <img
+    src="<%= manga.attributes.posterImage.large %>"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title"><%= manga.attributes.canonicalTitle %></h5>
+    <p class="card-text">Rating: <%= manga.attributes.averageRating %></p>
+    <p class="card-text">Status: <%= manga.attributes.status %></p>
+    <p class="card-text">Start: <%= manga.attributes.startDate %></p>
+    <p class="card-text">
+      Finish: <%= manga.attributes.endDate ? manga.attributes.endDate : "N/A" %>
+    </p>
+    <a href="/manga/<%= manga.attributes.slug %>" class="btn btn-primary"
+      >Details</a
+    >
+  </div>
+</div>
+<% }) %> <% } %> <%- include('../partials/footer') %>

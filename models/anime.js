@@ -1,18 +1,20 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
-      reviewer: String,
-      reviewerPhoto: String, 
-      rating: { type: Number, min: 1, max: 10 },
-      content: String,
-    },
-    {
-      timestamps: true,
-    }
-  );
+const reviewSchema = new Schema(
+  {
+    reviewer: String,
+    reviewerPhoto: String,
+    rating: { type: Number, min: 1, max: 10 },
+    content: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-  const animeSchema = new Schema({
+const animeSchema = new Schema(
+  {
     title: String,
     slug: String,
     status: String,
@@ -24,12 +26,10 @@ const reviewSchema = new Schema({
     videoUrl: String,
     favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
     reviews: [reviewSchema],
-    
+  },
+  {
+    timestamps: true,
+  }
+);
 
-
-  },{
-      timestamps: true
-  });
-
-
-  module.exports = mongoose.model("Anime", animeSchema);
+module.exports = mongoose.model("Anime", animeSchema);

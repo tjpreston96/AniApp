@@ -10,17 +10,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/stylesheets/estyle.css" />
-    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/">AniApp</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-        <% if (user) { %>
+          <% if (user) { %>
           <li class="nav-item">
             <a class="nav-link" href="/home">Home</a>
           </li>
@@ -42,14 +49,15 @@
           <li class="nav-item">
             <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
           </li>
-        
-       
-        <% } else { %>
+
+          <% } else { %>
           <li>
             <a href="/auth/google">Login with Google</a>
           </li>
           <% } %>
         </ul>
-        </div>
-      </nav>
-      <main>
+      </div>
+    </nav>
+    <main></main>
+  </body>
+</html>

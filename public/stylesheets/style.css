@@ -3,39 +3,37 @@ body {
   background-color: rgb(74, 59, 136);
   margin: 0;
   min-width: 100vw;
- 
 }
 
 nav {
   background-color: white;
 }
-.card{
+.card {
   margin-top: 2rem;
 }
 #avatarPhoto {
   border-radius: 50%;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   /* justify-content: center;
   align-items: center; */
 }
 
-.collectionImg{
+.collectionImg {
   max-width: 30rem;
 }
 
-.collectionBtn{
+.collectionBtn {
   max-width: 30rem;
 }
 hr {
   border-top: 3px solid black;
-
 }
 
-main{
+main {
   align-items: center;
 }
 /* main>div:first-of-type{

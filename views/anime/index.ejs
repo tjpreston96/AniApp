@@ -1,22 +1,25 @@
 <%- include('../partials/header') %>
 
 <h2>Anime Collection</h2>
-<a href="/anime/new" class="btn btn-info collectionBtn" role="button">ADD ANIME</a>
-<hr>
-<% if(anime.length > 0) { %> 
-    <% anime.forEach(anime=> { %>
-        <div class="card" style="width: 18rem;">
-            <img src="<%= anime.imageUrl %>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><%= anime.title %> </h5>
-                <p class="card-text">Status: <%= anime.status %> </p>
-                <p class="card-text">Average Score: <%= anime.averageRating %> </p>
-                <a href="/anime/<%= anime.slug %>" class="btn btn-primary">Details</a>
-            </div>
-        </div>
-    <% }) %>
-<% } else { %> 
-    <h3>There are no anime in your collection</h3>
-    <img class="collectionImg" src="https://image.myanimelist.net/ui/ZPVPz_CObDpnH08hnJF81OfXLbu4yKz7EE0wsUNM1bNeYbLa_usjYKZUoMkJtbUpSaXULsTMw_2ryJt0YU-zoWe6SD9M55OMrRoOeili2qaCaHWkz6wmoBKJnGyDGcgd" alt="">
-<% } %> 
-<%- include('../partials/footer') %>
+<a href="/anime/new" class="btn btn-info collectionBtn" role="button"
+  >ADD ANIME</a
+>
+<hr />
+<% if(anime.length > 0) { %> <% anime.forEach(anime=> { %>
+<div class="card" style="width: 18rem">
+  <img src="<%= anime.imageUrl %>" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title"><%= anime.title %></h5>
+    <p class="card-text">Status: <%= anime.status %></p>
+    <p class="card-text">Average Score: <%= anime.averageRating %></p>
+    <a href="/anime/<%= anime.slug %>" class="btn btn-primary">Details</a>
+  </div>
+</div>
+<% }) %> <% } else { %>
+<h3>There are no anime in your collection</h3>
+<img
+  class="collectionImg"
+  src="https://image.myanimelist.net/ui/ZPVPz_CObDpnH08hnJF81OfXLbu4yKz7EE0wsUNM1bNeYbLa_usjYKZUoMkJtbUpSaXULsTMw_2ryJt0YU-zoWe6SD9M55OMrRoOeili2qaCaHWkz6wmoBKJnGyDGcgd"
+  alt=""
+/>
+<% } %> <%- include('../partials/footer') %>

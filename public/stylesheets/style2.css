@@ -1,19 +1,19 @@
 body {
-    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: gray;
-    background: url('https://wallpaperaccess.com/full/1313262.gif');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-attachment: fixed;
-    margin: 0;
-    color: white;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: gray;
+  background: url("https://wallpaperaccess.com/full/1313262.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-attachment: fixed;
+  margin: 0;
+  color: white;
 }
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 #avatarPhoto {
-    border-radius: 50%;
-  }
+  border-radius: 50%;
+}

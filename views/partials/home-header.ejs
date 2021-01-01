@@ -10,60 +10,77 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/stylesheets/style2.css" />
-    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/symbols/sym-2/sym188.ani), url(https://cur.cursors-4u.net/symbols/sym-2/sym188.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2008/11/08/radiant-blue-star.html" target="_blank" title="Radiant Blue Star"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Radiant Blue Star" style="position:absolute; top: 0px; right: 0px;" /></a>
+    <style type="text/css">
+      * {
+        cursor: url(https://cur.cursors-4u.net/symbols/sym-2/sym188.ani),
+          url(https://cur.cursors-4u.net/symbols/sym-2/sym188.png), auto !important;
+      }
+    </style>
+    <a
+      href="https://www.cursors-4u.com/cursor/2008/11/08/radiant-blue-star.html"
+      target="_blank"
+      title="Radiant Blue Star"
+      ><img
+        src="https://cur.cursors-4u.net/cursor.png"
+        border="0"
+        alt="Radiant Blue Star"
+        style="position: absolute; top: 0px; right: 0px"
+    /></a>
     <title><%= title %></title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">AniApp</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+      <a class="navbar-brand" href="/">AniApp</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
           <% if (user) { %>
-            <li class="nav-item">
-              <a class="nav-link" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/anime">Anime</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/anime/new">Add Anime</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/manga">Manga</a>
-            </li><li class="nav-item">
-              <a class="nav-link" href="/manga/new">Add Manga</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users/profile">My Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/users">Users</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/auth/logout">Log Out</a>
-            </li>
-            <li class="nav-item">
-              <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
-            </li>
-          
-         
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/anime">Anime</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/anime/new">Add Anime</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/manga">Manga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/manga/new">Add Manga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/profile">My Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/logout">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="" />
+          </li>
+
           <% } else { %>
-            <li class="nav-item">
-              <a href="/auth/google">Login with Google</a>
-            </li>
-            <% } %>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a href="/auth/google">Login with Google</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
     </nav>
-<main>
+    <main></main>
+  </body>
+</html>

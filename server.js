@@ -19,11 +19,9 @@ require("./config/passport");
 // require routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const usersRouter = require("./routes/users")
+const usersRouter = require("./routes/users");
 const animeRouter = require("./routes/anime");
 const mangaRouter = require("./routes/manga");
-
-
 
 const app = express();
 
@@ -56,8 +54,6 @@ app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/anime", animeRouter);
 app.use("/manga", mangaRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
