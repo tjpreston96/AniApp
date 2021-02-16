@@ -1,6 +1,6 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(74, 59, 136);
+  background-color: rgb(57, 95, 110);
   margin: 0;
   min-width: 100vw;
 }
@@ -18,23 +18,24 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 .collectionImg {
-  max-width: 30rem;
+  max-width: 20rem;
 }
 
 .collectionBtn {
   max-width: 30rem;
 }
 hr {
-  border-top: 3px solid black;
+  border-top: 1px solid black;
 }
 
 main {
   align-items: center;
+  /* text-align: center; */
 }
 /* main>div:first-of-type{
   display: flex;

@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
 <h3>Manga Collection</h3>
 <a href="/manga/new" class="btn btn-info collectionBtn" role="button"
-  >ADD MANGA</a
+  ><b>ADD MANGA</b></a
 >
+<hr>
 <% if(manga.length > 0) { %> <% manga.forEach(manga => { %>
 <div class="card" style="width: 18rem">
   <img src="<%= manga.imageUrl %>" class="card-img-top" alt="..." />
