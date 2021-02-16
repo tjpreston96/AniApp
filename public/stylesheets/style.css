@@ -20,6 +20,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .collectionImg {
@@ -29,13 +30,12 @@ main {
 .collectionBtn {
   max-width: 30rem;
 }
-hr {
-  border-top: 1px solid black;
-}
+/* hr {
+  border-top: 2px solid black;
+} */
 
 main {
   align-items: center;
-  /* text-align: center; */
 }
 /* main>div:first-of-type{
   display: flex;
