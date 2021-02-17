@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<form action="/manga/search" method="POST">
+<form action="/manga/search" method="POST" class="search">
   <div class="form-row">
-    <div class="col-md-10">
+    <div class="col-md-12">
       <input
         type="text"
         class="form-control"
@@ -10,8 +10,8 @@
         placeholder="Search for manga..."
       />
     </div>
-    <button type="submit" class="btn" style="background-color: #cfb53b;">Search</button>
   </div>
+  <button type="submit" class="btn" style="background-color: #cfb53b;">Search</button>
 </form>
 
 <!-- results go below -->

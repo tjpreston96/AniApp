@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h3><%= title %></h3>
+<h2><b><%= title %></b></h2>
 
 <div class="card" style="width: 18rem">
   <!-- If our user doesn't have an avatar image, let's use a silly cat picture! -->
@@ -29,12 +29,12 @@
     <!-- This is where we'll render buttons to add/remove a user as a friend -->
     <% if (!userInfo._id.equals(user._id) &&
     !user.friends.includes(userInfo._id)) { %>
-    <a href="/users/<%= userInfo._id %>/friend" class="btn btn-primary"
+    <a href="/users/<%= userInfo._id %>/friend" class="btn" style="background-color: #cfb53b;"
       >Add Friend</a
     >
     <% } %> <% if (!userInfo._id.equals(user._id) &&
     user.friends.includes(userInfo._id)) { %>
-    <a href="/users/<%= userInfo._id %>/unfriend" class="btn btn-primary"
+    <a href="/users/<%= userInfo._id %>/unfriend" class="btn btn-danger"
       >Remove Friend</a
     >
     <% } %>

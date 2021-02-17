@@ -5,8 +5,8 @@ body {
   min-width: 100vw;
 }
 
-nav {
-  margin-bottom: 1rem;
+h2 {
+  margin-top: 1rem;
 }
 .card {
   margin-top: 2rem;
@@ -21,6 +21,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* margin-top: 1rem; */
 }
 
 .collectionImg {
@@ -29,17 +30,16 @@ main {
 }
 
 .collectionBtn {
-  max-width: 30rem;
+  max-width: 35rem;
 }
-/* hr {
-  border-top: 2px solid black;
-} */
+
 
 main {
   align-items: center;
 }
-/* main>div:first-of-type{
+
+.search{
+  margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+  flex-direction: row;
+}
