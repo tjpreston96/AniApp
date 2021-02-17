@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background-color: white;
+  margin-bottom: 1rem;
 }
 .card {
   margin-top: 2rem;
@@ -24,7 +24,8 @@ main {
 }
 
 .collectionImg {
-  max-width: 20rem;
+  width: 65%;
+  max-width: 35rem;
 }
 
 .collectionBtn {
