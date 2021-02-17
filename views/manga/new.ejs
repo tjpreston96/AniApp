@@ -10,7 +10,7 @@
         placeholder="Search for manga..."
       />
     </div>
-    <button type="submit" class="btn btn-info">Search</button>
+    <button type="submit" class="btn" style="background-color: #cfb53b;">Search</button>
   </div>
 </form>
 
@@ -30,7 +30,7 @@
     <p class="card-text">
       Finish: <%= manga.attributes.endDate ? manga.attributes.endDate : "N/A" %>
     </p>
-    <a href="/manga/<%= manga.attributes.slug %>" class="btn btn-primary"
+    <a href="/manga/<%= manga.attributes.slug %>" class="btn" style="background-color: #cfb53b;"
       >Details</a
     >
   </div>

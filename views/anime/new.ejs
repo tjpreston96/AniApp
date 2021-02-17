@@ -11,7 +11,7 @@
       />
     </div>
   </div>
-  <button type="submit" class="btn btn-info">Search</button>
+  <button type="submit" class="btn" style="background-color: #cfb53b;">Search</button>
 </form>
 
 <!-- results go below -->
@@ -27,7 +27,7 @@
     <p class="card-text">Age Rating: <%= anime.attributes.ageRating %></p>
     <p class="card-text">Rating: <%= anime.attributes.averageRating %></p>
     <p class="card-text">Status: <%= anime.attributes.status %></p>
-    <a href="/anime/<%= anime.attributes.slug %>" class="btn btn-primary"
+    <a href="/anime/<%= anime.attributes.slug %>" class="btn" style="background-color: #cfb53b;"
       >Details</a
     >
   </div>
