@@ -144,66 +144,61 @@
     action="/manga/<%= manga.attributes.slug %>/collection?_method=DELETE"
     method="POST"
   >
+  </form>
     <% } else { %>
-    <form action="/manga/<%= manga.attributes.slug %>/collection" method="POST">
-      <% } %>
-      <input
-        type="text"
-        hidden
-        name="title"
-        value="<%= manga.attributes.canonicalTitle %>"
-      />
-      <input
-        type="date"
-        hidden
-        name="startDate"
-        value="<%= manga.attributes.startDate %>"
-      />
-      <input
-        type="number"
-        hidden
-        name="averageRating"
-        value="<%= manga.attributes.averageRating %>"
-      />
-      <input
-        type="text"
-        hidden
-        name="status"
-        value="<%= manga.attributes.status %>"
-      />
-      <input
-        type="text"
-        hidden
-        name="ageRating"
-        value="<%= manga.attributes.ageRating %>"
-      />
-      <input type="text" hidden name="videoUrl" value="<%=
-      manga.attributes.youtubeVideoId ? manga.attributes.youtubeVideoId : ""
-      %>">
-      <input
-        type="text"
-        hidden
-        name="imageUrl"
-        value="<%= manga.attributes.posterImage.large %>"
-      />
-      <input
-        type="number"
-        hidden
-        name="id"
-        value="<%= manga.attributes.id %>"
-      />
-      <input
-        type="text"
-        hidden
-        name="slug"
-        value="<%= manga.attributes.slug %>"
-      />
-      <button class="btn btn-warning">
-        <%= favoritedBy.some(u => {return u.email === user.email}) ? "Remove
-        from Collection" : "Add to Collection" %>
-      </button>
-    </form>
-
-    </form>
-  </div>
-    <%- include('../partials/footer') %>
+    <form
+      action="/manga/<%= manga.attributes.slug %>/collection"
+      method="POST"
+    <% } %>
+    <input
+      type="text"
+      hidden
+      name="title"
+      value="<%= manga.attributes.canonicalTitle %>"
+    />
+    <input
+      type="date"
+      hidden
+      name="startDate"
+      value="<%= manga.attributes.startDate %>"
+    />
+    <input
+      type="number"
+      hidden
+      name="averageRating"
+      value="<%= manga.attributes.averageRating %>"
+    />
+    <input
+      type="text"
+      hidden
+      name="status"
+      value="<%= manga.attributes.status %>"
+    />
+    <input
+      type="text"
+      hidden
+      name="ageRating"
+      value="<%= manga.attributes.ageRating %>"
+    />
+    <input type="text" hidden name="videoUrl" value="<%=
+    manga.attributes.youtubeVideoId ? manga.attributes.youtubeVideoId : "" %>">
+    <input
+      type="text"
+      hidden
+      name="imageUrl"
+      value="<%= manga.attributes.posterImage.large %>"
+    />
+    <input type="number" hidden name="id" value="<%= manga.attributes.id %>" />
+    <input
+      type="text"
+      hidden
+      name="slug"
+      value="<%= manga.attributes.slug %>"
+    />
+    <button class="btn btn-warning">
+      <%= favoritedBy.some(u => {return u.email === user.email}) ? "Remove from
+      Collection" : "Add to Collection" %>
+    </button>
+  </form>
+</div>
+<%- include('../partials/footer') %>

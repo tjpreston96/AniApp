@@ -33,13 +33,24 @@ main {
   max-width: 35rem;
 }
 
-
 main {
   align-items: center;
 }
 
-.search{
+.search {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
 }
+
+#userCard {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userDiv {
+  width: 80%;
+}
+
